@@ -2,7 +2,6 @@ package com.riri.grocerystore.controller;
 
 import com.riri.grocerystore.model.Cleaning;
 import com.riri.grocerystore.model.Cosmetics;
-import com.riri.grocerystore.model.JBCstore;
 import com.riri.grocerystore.model.Snacks;
 import com.riri.grocerystore.repository.CleaningRepo;
 import com.riri.grocerystore.repository.CosmeticsRepo;
