@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cleaning items</title>
+</head>
+<body>
+
+<form th:action="@{/postcleaning}" th:object="${cleaning}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br/>
+    <label>Name: </label><input type="text" th:field="*{name}"/>
+
+    <span th:if="${#fields.hasErrors('strength')}" th:errors="*{strength}"></span><br/>
+    <label>Strength: </label><input type="text" th:field="*{strength}"/>
+
+    <span th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></span><br/>
+    <label>Quantity: </label><input type="text" th:field="*{quantity}"/>
+
+    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span><br/>
+    <label>Price: </label><input type="text" th:field="*{price}"/>
+
+
+
+    <br />
+    <input type="submit" value="Submit Cleaning item"/>
+</form>
+<br />
+<a th:href="@{/addsnacks}">Continue to Snacks</a>
+</body>
+</html>

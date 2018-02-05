@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cosmetics items</title>
+</head>
+<body>
+
+<form th:action="@{/postcosmetics}" th:object="${cosmetic}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+
+    <span th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></span><br/>
+    <label>Brand: </label><input type="text" th:field="*{brand}"/>
+
+    <span th:if="${#fields.hasErrors('popularity')}" th:errors="*{popularity}"></span><br/>
+    <label>popularity: </label><input type="text" th:field="*{popularity}"/>
+
+    <span th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></span><br/>
+    <label>Quantity: </label><input type="text" th:field="*{quantity}"/>
+
+    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span><br/>
+    <label>Price: </label><input type="text" th:field="*{price}"/>
+
+
+
+
+    <br />
+    <input type="submit" value="Submit Cosmetics item"/>
+</form>
+<br />
+<a th:href="@{/addcleaning}">Continue to add Cleaning Items</a>
+</body>
+</html>

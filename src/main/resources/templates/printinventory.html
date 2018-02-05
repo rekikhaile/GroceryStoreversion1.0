@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Inventory List</title>
+</head>
+<body>
+<table>
+    <tr><b>Cosmetics Items: </b></tr>
+    <tr th:each="cosmetic :${cosmetics}">
+        <p th:text ="'Brand: ' +${cosmetic.brand}"> Some text</p>
+        <p th:text ="'Popularity: ' +${cosmetic.popularity}">some text here</p>
+        <p th:text ="'Quantity: ' +${cosmetic.quantity}"> Some</p>
+        <p th:text ="'Price: ' +${cosmetic.price}"> Some</p>
+
+
+    </tr>
+    <br /><br />
+    <tr><b>Cleaning Items: </b></tr>
+    <tr th:each="cleaning :${cleanings}">
+        <p th:text ="'Name: ' +${cleaning.name}">some text here</p>
+        <p th:text ="'Strength: ' +${cleaning.strength}">some text here</p>
+        <p th:text ="'Quantity: ' +${cleaning.quantity}"> Some</p>
+        <p th:text ="'Price: ' +${cleaning.price}"> Some</p>
+
+
+    </tr>
+
+    <br /><br />
+    <tr><b>Snacks Items: </b></tr>
+    <tr th:each="snack :${snacks}">
+        <p th:text ="'Name: ' +${snack.name}">some text here</p>
+        <p th:text ="'Crunchiness: ' +${snack.crunchiness}">some text here</p>
+        <p th:text ="'Quantity: ' +${snack.quantity}"> Some</p>
+        <p th:text ="'Price: ' +${snack.price}"> Some</p>
+
+    </tr>
+
+<tr>
+    <h1>Total Revenue: </h1>
+    <p th:text ="'Revenue: ' +${totalrev}"> Test</p>
+</tr>
+
+</table>
+
+</body>
+</html>
